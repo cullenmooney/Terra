@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		803559BD1C03795E001DC301 /* Pods_Terra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C38501C4EDE32503A65B45 /* Pods_Terra.framework */; };
 		B337EDBC2035C2AD0061C3E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337EDBB2035C2AD0061C3E5 /* AppDelegate.swift */; };
-		B337EDBE2035C2AD0061C3E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337EDBD2035C2AD0061C3E5 /* ViewController.swift */; };
+		B337EDBE2035C2AD0061C3E5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337EDBD2035C2AD0061C3E5 /* LoginController.swift */; };
 		B337EDC12035C2AD0061C3E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B337EDBF2035C2AD0061C3E5 /* Main.storyboard */; };
 		B337EDC32035C2AD0061C3E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B337EDC22035C2AD0061C3E5 /* Assets.xcassets */; };
 		B337EDC62035C2AD0061C3E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B337EDC42035C2AD0061C3E5 /* LaunchScreen.storyboard */; };
+		B3E3C4832035CA0F007AAD7A /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E3C4822035CA0F007AAD7A /* MapController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02C38501C4EDE32503A65B45 /* Pods_Terra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Terra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EFDE85E2C7A8DD5FB5B4044 /* Pods-Terra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Terra.release.xcconfig"; path = "Pods/Target Support Files/Pods-Terra/Pods-Terra.release.xcconfig"; sourceTree = "<group>"; };
+		2EA49105EE9159A1CD740765 /* Pods-Terra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Terra.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Terra/Pods-Terra.debug.xcconfig"; sourceTree = "<group>"; };
 		B337EDB82035C2AD0061C3E5 /* Terra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Terra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B337EDBB2035C2AD0061C3E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B337EDBD2035C2AD0061C3E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B337EDBD2035C2AD0061C3E5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B337EDC02035C2AD0061C3E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B337EDC22035C2AD0061C3E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B337EDC52035C2AD0061C3E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B337EDC72035C2AD0061C3E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3E3C4822035CA0F007AAD7A /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				803559BD1C03795E001DC301 /* Pods_Terra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FBE241C2CACF962C45D2256 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2EA49105EE9159A1CD740765 /* Pods-Terra.debug.xcconfig */,
+				1EFDE85E2C7A8DD5FB5B4044 /* Pods-Terra.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		969C717BDE0E3DEDE1537D76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02C38501C4EDE32503A65B45 /* Pods_Terra.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B337EDAF2035C2AD0061C3E5 = {
 			isa = PBXGroup;
 			children = (
 				B337EDBA2035C2AD0061C3E5 /* Terra */,
 				B337EDB92035C2AD0061C3E5 /* Products */,
+				3FBE241C2CACF962C45D2256 /* Pods */,
+				969C717BDE0E3DEDE1537D76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,8 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				B337EDBB2035C2AD0061C3E5 /* AppDelegate.swift */,
-				B337EDBD2035C2AD0061C3E5 /* ViewController.swift */,
 				B337EDBF2035C2AD0061C3E5 /* Main.storyboard */,
+				B337EDBD2035C2AD0061C3E5 /* LoginController.swift */,
+				B3E3C4822035CA0F007AAD7A /* MapController.swift */,
 				B337EDC22035C2AD0061C3E5 /* Assets.xcassets */,
 				B337EDC42035C2AD0061C3E5 /* LaunchScreen.storyboard */,
 				B337EDC72035C2AD0061C3E5 /* Info.plist */,
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B337EDCA2035C2AD0061C3E5 /* Build configuration list for PBXNativeTarget "Terra" */;
 			buildPhases = (
+				F9A4FB484DA3E9F14CB4DCBB /* [CP] Check Pods Manifest.lock */,
 				B337EDB42035C2AD0061C3E5 /* Sources */,
 				B337EDB52035C2AD0061C3E5 /* Frameworks */,
 				B337EDB62035C2AD0061C3E5 /* Resources */,
+				45B123A3CFC3C14F9167D8B3 /* [CP] Embed Pods Frameworks */,
+				30B306F6FECC5E79C1C7546B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +161,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		30B306F6FECC5E79C1C7546B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Terra/Pods-Terra-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45B123A3CFC3C14F9167D8B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Terra/Pods-Terra-frameworks.sh",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Terra/Pods-Terra-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9A4FB484DA3E9F14CB4DCBB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Terra-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B337EDB42035C2AD0061C3E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B337EDBE2035C2AD0061C3E5 /* ViewController.swift in Sources */,
+				B337EDBE2035C2AD0061C3E5 /* LoginController.swift in Sources */,
+				B3E3C4832035CA0F007AAD7A /* MapController.swift in Sources */,
 				B337EDBC2035C2AD0061C3E5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,11 +359,13 @@
 		};
 		B337EDCB2035C2AD0061C3E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EA49105EE9159A1CD740765 /* Pods-Terra.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M3RNL2J68L;
 				INFOPLIST_FILE = Terra/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cullenmooney.Terra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,11 +376,13 @@
 		};
 		B337EDCC2035C2AD0061C3E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EFDE85E2C7A8DD5FB5B4044 /* Pods-Terra.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M3RNL2J68L;
 				INFOPLIST_FILE = Terra/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cullenmooney.Terra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
