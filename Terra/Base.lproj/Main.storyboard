@@ -52,9 +52,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ymu-eU-yWV">
-                                <rect key="frame" x="30" y="621" width="315" height="157"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ymu-eU-yWV">
+                                <rect key="frame" x="8" y="589" width="359" height="184"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wrigley Building" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhU-0x-Z3u">
                                         <rect key="frame" x="0.0" y="0.0" width="174" height="31"/>
@@ -93,19 +92,24 @@
                                         </state>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wrigley" translatesAutoresizingMaskIntoConstraints="NO" id="WwH-me-8ZT">
-                                        <rect key="frame" x="182" y="21" width="125" height="123"/>
+                                        <rect key="frame" x="191" y="21" width="136" height="136"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="184" id="jZw-q5-tMa"/>
+                                </constraints>
                                 <viewLayoutGuide key="safeArea" id="7cd-TH-1Yw"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="r4J-p4-dwd" firstAttribute="top" secondItem="bTv-fe-IAo" secondAttribute="top" id="9JE-6D-cFN"/>
+                            <constraint firstItem="URo-uC-BPH" firstAttribute="bottom" secondItem="Ymu-eU-yWV" secondAttribute="bottom" constant="5" id="DO4-Nf-trB"/>
                             <constraint firstItem="r4J-p4-dwd" firstAttribute="leading" secondItem="URo-uC-BPH" secondAttribute="leading" id="fiQ-gi-N5F"/>
                             <constraint firstAttribute="bottom" secondItem="r4J-p4-dwd" secondAttribute="bottom" id="h3U-kC-dvA"/>
+                            <constraint firstItem="Ymu-eU-yWV" firstAttribute="leading" secondItem="URo-uC-BPH" secondAttribute="leading" constant="8" id="ld9-uf-J1h"/>
+                            <constraint firstItem="URo-uC-BPH" firstAttribute="trailing" secondItem="Ymu-eU-yWV" secondAttribute="trailing" constant="8" id="lqy-7p-4Hv"/>
                             <constraint firstItem="URo-uC-BPH" firstAttribute="trailing" secondItem="r4J-p4-dwd" secondAttribute="trailing" id="scr-OU-xvT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="URo-uC-BPH"/>
@@ -117,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsv-ht-5fU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1287" y="132"/>
+            <point key="canvasLocation" x="1285.5999999999999" y="131.52709359605913"/>
         </scene>
     </scenes>
     <resources>

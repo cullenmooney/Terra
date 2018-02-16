@@ -26,10 +26,11 @@ class MapController: UIViewController, MGLMapViewDelegate {
         mapView.delegate = self
         mapViewContainer.addSubview(mapView)
         
-        annotationContext.isHidden = true
         
         // Allow the map view to display the user's location
         mapView.showsUserLocation = true
+        
+        setupAnnotationContextView()
         
         
     }
@@ -44,8 +45,6 @@ class MapController: UIViewController, MGLMapViewDelegate {
         
         // adding the marker to the map
         mapView.addAnnotation(wrigleyBuilding)
-        
-        annotationContext.isHidden = true
     }
     
     // Use the default marker. See also: our view annotation or custom marker examples.
@@ -60,7 +59,17 @@ class MapController: UIViewController, MGLMapViewDelegate {
     
         
         annotationContext.layer.cornerRadius = 5
-        annotationContext.isHidden = false
+        annotationContext.alpha = 1.0
+    }
+    
+    func setupAnnotationContextView() {
+        annotationContext.alpha = 0
+        let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        blurView.frame = annotationContext.bounds
+        blurView.layer.cornerRadius = 5
+        blurView.clipsToBounds = true
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+        annotationContext.insertSubview(blurView, at: 0)
     }
 
 }
