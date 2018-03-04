@@ -62,7 +62,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="400 N. Michigan Ave., Chicago, IL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhT-LB-hLN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dummy Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhT-LB-hLN">
                                         <rect key="frame" x="0.0" y="31" width="174" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -70,7 +70,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Architect: Graham, Anderson, Probst &amp; White" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJA-cS-zXT">
-                                        <rect key="frame" x="0.0" y="63" width="157" height="38"/>
+                                        <rect key="frame" x="0.0" y="63" width="157" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <nil key="textColor"/>
@@ -116,6 +116,11 @@
                     </view>
                     <connections>
                         <outlet property="annotationContext" destination="Ymu-eU-yWV" id="Be6-Yh-04O"/>
+                        <outlet property="buildingAddress" destination="xhT-LB-hLN" id="vnb-Ao-unR"/>
+                        <outlet property="buildingArchitect" destination="cJA-cS-zXT" id="SoQ-Ai-JXd"/>
+                        <outlet property="buildingImage" destination="WwH-me-8ZT" id="clD-C5-rhs"/>
+                        <outlet property="buildingName" destination="UhU-0x-Z3u" id="dfW-NA-5Oc"/>
+                        <outlet property="buildingYear" destination="OYV-me-vYW" id="5R5-lU-UeF"/>
                         <outlet property="mapViewContainer" destination="r4J-p4-dwd" id="dYw-5K-s55"/>
                     </connections>
                 </viewController>

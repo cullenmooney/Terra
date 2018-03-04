@@ -13,8 +13,14 @@ class MapController: UIViewController, MGLMapViewDelegate {
     
     @IBOutlet weak var mapViewContainer: UIView!
     @IBOutlet weak var annotationContext: UIView!
+    @IBOutlet weak var buildingName: UILabel!
+    @IBOutlet weak var buildingAddress: UILabel!
+    @IBOutlet weak var buildingArchitect: UILabel!
+    @IBOutlet weak var buildingYear: UILabel!
+    @IBOutlet weak var buildingImage: UIImageView!
     
     var mapView: MGLMapView!
+    
     
     let buildingAnnotations = BuildingAnnotations()
     
@@ -46,7 +52,6 @@ class MapController: UIViewController, MGLMapViewDelegate {
 
         // adding the marker to the map
         mapView.addAnnotations(buildingAnnotations.buildings)
-
     }
     
     
@@ -57,13 +62,15 @@ class MapController: UIViewController, MGLMapViewDelegate {
     }
 
     // Zooming into annotation
-    func mapView(_ mapView: MGLMapView, didSelect wrigleyBuilding: MGLAnnotation) {
-        let camera = MGLMapCamera(lookingAtCenter: wrigleyBuilding.coordinate, fromDistance: 4000, pitch: 0, heading: 0)
+    func mapView(_ mapView: MGLMapView, didSelect buildings: MGLAnnotation) {
+        let camera = MGLMapCamera(lookingAtCenter: buildings.coordinate, fromDistance: 4000, pitch: 0, heading: 0)
         mapView.setCamera(camera, animated: true)
-
-
         annotationContext.layer.cornerRadius = 5
         annotationContext.alpha = 1.0
+
+//        buildingName.text = buildings.name
+//        buildingAddress.text = buildings.address
+
     }
 
     func setupAnnotationContextView() {
