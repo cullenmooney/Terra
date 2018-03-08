@@ -45,11 +45,6 @@ class MapController: UIViewController, MGLMapViewDelegate {
 
     
     func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
-
-        // Defining an example marker
-        let wrigleyBuilding = MGLPointAnnotation()
-        wrigleyBuilding.coordinate = CLLocationCoordinate2D(latitude: 41.8897551, longitude: -87.6247747 )
-
         // adding the marker to the map
         mapView.addAnnotations(buildingAnnotations.buildings)
     }
@@ -62,14 +57,16 @@ class MapController: UIViewController, MGLMapViewDelegate {
     }
 
     // Zooming into annotation
-    func mapView(_ mapView: MGLMapView, didSelect buildings: MGLAnnotation) {
-        let camera = MGLMapCamera(lookingAtCenter: buildings.coordinate, fromDistance: 4000, pitch: 0, heading: 0)
+    func mapView(_ mapView: MGLMapView, didSelect building: MGLAnnotation) {
+        let camera = MGLMapCamera(lookingAtCenter: building.coordinate, fromDistance: 4000, pitch: 0, heading: 0)
         mapView.setCamera(camera, animated: true)
         annotationContext.layer.cornerRadius = 5
         annotationContext.alpha = 1.0
-
-//        buildingName.text = buildings.name
-//        buildingAddress.text = buildings.address
+    
+        for i in 0..<buildingAnnotations.buildings.count {
+            buildingArchitect.text = buildingAnnotations.buildings[i].architect
+            print(buildingAnnotations.buildings[i].architect)
+        }
 
     }
 
