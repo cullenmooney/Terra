@@ -62,12 +62,17 @@ class MapController: UIViewController, MGLMapViewDelegate {
         mapView.setCamera(camera, animated: true)
         annotationContext.layer.cornerRadius = 5
         annotationContext.alpha = 1.0
-    
-        for i in 0..<buildingAnnotations.buildings.count {
-            buildingArchitect.text = buildingAnnotations.buildings[i].architect
-            print(buildingAnnotations.buildings[i].architect)
-        }
+        
+        getBuildingInfo(theBuilding: building as! BuildingAnnotation)
 
+    }
+    
+    func getBuildingInfo(theBuilding: BuildingAnnotation) {
+        buildingName.text = theBuilding.name
+        buildingAddress.text = theBuilding.address
+        buildingArchitect.text = theBuilding.architect
+        buildingYear.text = theBuilding.year
+        // buildingImage.image = theBuilding.image
     }
 
     func setupAnnotationContextView() {
