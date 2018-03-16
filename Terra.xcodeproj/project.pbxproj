@@ -84,9 +84,9 @@
 			children = (
 				B337EDBB2035C2AD0061C3E5 /* AppDelegate.swift */,
 				B337EDBF2035C2AD0061C3E5 /* Main.storyboard */,
-				B3500E14204386320016262C /* BuildingLocations.swift */,
 				B337EDBD2035C2AD0061C3E5 /* LoginController.swift */,
 				B3E3C4822035CA0F007AAD7A /* MapController.swift */,
+				B3500E14204386320016262C /* BuildingLocations.swift */,
 				B337EDC22035C2AD0061C3E5 /* Assets.xcassets */,
 				B337EDC42035C2AD0061C3E5 /* LaunchScreen.storyboard */,
 				B337EDC72035C2AD0061C3E5 /* Info.plist */,

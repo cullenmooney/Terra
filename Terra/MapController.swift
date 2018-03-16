@@ -21,7 +21,6 @@ class MapController: UIViewController, MGLMapViewDelegate {
     
     var mapView: MGLMapView!
     
-    
     let buildingAnnotations = BuildingAnnotations()
     
     override func viewDidLoad() {
@@ -51,28 +50,28 @@ class MapController: UIViewController, MGLMapViewDelegate {
     
     
 
-    // Use the default marker. See also: our view annotation or custom marker examples.
+    // Default marker
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
         return nil
     }
 
     // Zooming into annotation
-    func mapView(_ mapView: MGLMapView, didSelect building: MGLAnnotation) {
-        let camera = MGLMapCamera(lookingAtCenter: building.coordinate, fromDistance: 4000, pitch: 0, heading: 0)
+    func mapView(_ mapView: MGLMapView, didSelect marker: MGLAnnotation) {
+        let camera = MGLMapCamera(lookingAtCenter: marker.coordinate, fromDistance: 4000, pitch: 0, heading: 0)
         mapView.setCamera(camera, animated: true)
         annotationContext.layer.cornerRadius = 5
         annotationContext.alpha = 1.0
         
-        getBuildingInfo(theBuilding: building as! BuildingAnnotation)
+        getBuildingInfo(for: marker as! BuildingAnnotation)
 
     }
     
-    func getBuildingInfo(theBuilding: BuildingAnnotation) {
-        buildingName.text = theBuilding.name
-        buildingAddress.text = theBuilding.address
-        buildingArchitect.text = theBuilding.architect
-        buildingYear.text = theBuilding.year
-        // buildingImage.image = theBuilding.image
+    func getBuildingInfo(for building: BuildingAnnotation) {
+        buildingName.text = building.name
+        buildingAddress.text = building.address
+        buildingArchitect.text = building.architect
+        buildingYear.text = building.year
+        buildingImage.image = building.image
     }
 
     func setupAnnotationContextView() {
@@ -84,5 +83,7 @@ class MapController: UIViewController, MGLMapViewDelegate {
         blurView.translatesAutoresizingMaskIntoConstraints = false
         annotationContext.insertSubview(blurView, at: 0)
     }
+    
+    
 }
 
