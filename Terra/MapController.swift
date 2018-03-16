@@ -63,7 +63,8 @@ class MapController: UIViewController, MGLMapViewDelegate {
         let camera = MGLMapCamera(lookingAtCenter: marker.coordinate, fromDistance: 4000, pitch: 0, heading: 0)
         mapView.setCamera(camera, animated: true)
         annotationContext.layer.cornerRadius = 5
-        annotationContext.alpha = 1.0
+        
+        annotationContext.isHidden = false
         
         getBuildingInfo(for: marker as! BuildingAnnotation)
 
@@ -82,7 +83,7 @@ class MapController: UIViewController, MGLMapViewDelegate {
     
     // Annotation styling
     func setupAnnotationContextView() {
-        annotationContext.alpha = 0
+        annotationContext.isHidden = true
         let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
         blurView.frame = annotationContext.bounds
         blurView.layer.cornerRadius = 5
@@ -98,6 +99,11 @@ class MapController: UIViewController, MGLMapViewDelegate {
             designVC.receivedDesign = designInfo
         }
     }
+    
+    @IBAction func closeAnnotation(_ sender: Any) {
+        annotationContext.isHidden = true
+    }
+    
     
 }
 
