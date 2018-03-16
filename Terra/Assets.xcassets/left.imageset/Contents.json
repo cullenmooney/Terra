@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "chicago.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "left@2x.png",
       "scale" : "2x"
     },
     {

@@ -14,6 +14,7 @@
 		B337EDC32035C2AD0061C3E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B337EDC22035C2AD0061C3E5 /* Assets.xcassets */; };
 		B337EDC62035C2AD0061C3E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B337EDC42035C2AD0061C3E5 /* LaunchScreen.storyboard */; };
 		B3500E15204386320016262C /* BuildingLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3500E14204386320016262C /* BuildingLocations.swift */; };
+		B37A80D3205C0D8C009830F1 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37A80D2205C0D8C009830F1 /* HistoryController.swift */; };
 		B3E3C4832035CA0F007AAD7A /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E3C4822035CA0F007AAD7A /* MapController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		B337EDC52035C2AD0061C3E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B337EDC72035C2AD0061C3E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3500E14204386320016262C /* BuildingLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingLocations.swift; sourceTree = "<group>"; };
+		B37A80D2205C0D8C009830F1 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
 		B3E3C4822035CA0F007AAD7A /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 				B337EDBF2035C2AD0061C3E5 /* Main.storyboard */,
 				B337EDBD2035C2AD0061C3E5 /* LoginController.swift */,
 				B3E3C4822035CA0F007AAD7A /* MapController.swift */,
+				B37A80D2205C0D8C009830F1 /* HistoryController.swift */,
 				B3500E14204386320016262C /* BuildingLocations.swift */,
 				B337EDC22035C2AD0061C3E5 /* Assets.xcassets */,
 				B337EDC42035C2AD0061C3E5 /* LaunchScreen.storyboard */,
@@ -225,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37A80D3205C0D8C009830F1 /* HistoryController.swift in Sources */,
 				B3500E15204386320016262C /* BuildingLocations.swift in Sources */,
 				B337EDBE2035C2AD0061C3E5 /* LoginController.swift in Sources */,
 				B3E3C4832035CA0F007AAD7A /* MapController.swift in Sources */,

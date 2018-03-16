@@ -15,11 +15,14 @@ class MapController: UIViewController, MGLMapViewDelegate {
     @IBOutlet weak var annotationContext: UIView!
     @IBOutlet weak var buildingName: UILabel!
     @IBOutlet weak var buildingAddress: UILabel!
+    @IBOutlet weak var buildingAddressTwo: UILabel!
     @IBOutlet weak var buildingArchitect: UILabel!
     @IBOutlet weak var buildingYear: UILabel!
     @IBOutlet weak var buildingImage: UIImageView!
     
     var mapView: MGLMapView!
+    
+    var designInfo = ""
     
     let buildingAnnotations = BuildingAnnotations()
     
@@ -42,7 +45,7 @@ class MapController: UIViewController, MGLMapViewDelegate {
        setupAnnotationContextView()
     }
 
-    
+    // Adding the markers
     func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
         // adding the marker to the map
         mapView.addAnnotations(buildingAnnotations.buildings)
@@ -50,12 +53,12 @@ class MapController: UIViewController, MGLMapViewDelegate {
     
     
 
-    // Default marker
+    // Default marker style
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
         return nil
     }
 
-    // Zooming into annotation
+    // Marker is selected
     func mapView(_ mapView: MGLMapView, didSelect marker: MGLAnnotation) {
         let camera = MGLMapCamera(lookingAtCenter: marker.coordinate, fromDistance: 4000, pitch: 0, heading: 0)
         mapView.setCamera(camera, animated: true)
@@ -66,14 +69,18 @@ class MapController: UIViewController, MGLMapViewDelegate {
 
     }
     
+    // Retreiving annotation info
     func getBuildingInfo(for building: BuildingAnnotation) {
         buildingName.text = building.name
         buildingAddress.text = building.address
+        buildingAddressTwo.text = building.addressTwo
         buildingArchitect.text = building.architect
         buildingYear.text = building.year
         buildingImage.image = building.image
+        designInfo = building.design
     }
-
+    
+    // Annotation styling
     func setupAnnotationContextView() {
         annotationContext.alpha = 0
         let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
@@ -84,6 +91,13 @@ class MapController: UIViewController, MGLMapViewDelegate {
         annotationContext.insertSubview(blurView, at: 0)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDesign" {
+            let designVC = segue.destination as! HistoryController
+            designVC.receivedName = buildingName.text!
+            designVC.receivedDesign = designInfo
+        }
+    }
     
 }
 
